@@ -14,7 +14,7 @@ IF=$1;
 
 i="0";
 duration="1000";
-logfile="NETLOG-$('date').txt";
+logfile="NETLOG-$(id -u -n)-$(date +%d-%m-%Y"_"%H:%M:%S).txt"
 
 ifconfig $IF >> "$logfile";
 
