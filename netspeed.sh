@@ -12,7 +12,7 @@ fi
 IF=$1;
 
 i="0";
-duration="1500";
+duration="1000";
 logfile="NETLOG-$(id -u -n)-$(date +%d-%m-%Y"_"%H:%M:%S).txt"
 
 ifconfig $IF >> "$logfile";
