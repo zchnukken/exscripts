@@ -1,6 +1,7 @@
 # Collects CPU, network and memory statistics.
 ## Required packages
 * sysstat
+$ sudo apt-get install sysstat
 
 ## Get the scripts
 $ git clone https://github.com/zchnukken/exscripts.git
