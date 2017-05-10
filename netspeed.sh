@@ -15,14 +15,16 @@ i="0";
 duration="1000";
 logfile="NETLOG-$(id -u -n)-$(date +%d-%m-%Y"_"%H:%M:%S).txt"
 
-hash ifconfig $IF 2>/dev/null
-ifexists=$?
+#hash ifconfig $IF 2>/dev/null
+#ifexists=$?
 
-if [ $ifexists -eq 1 ]; then
-	ifconfig $IF >> "$logfile";
-else
-	cat /proc/net/dev >> "$logfile";
-fi
+#if [ $ifexists -eq 1 ]; then
+#	ifconfig $IF >> "$logfile";
+#else
+#	cat /proc/net/dev >> "$logfile";
+#fi
+
+cat /proc/net/dev >> "$logfile";
 
 #ifconfig $IF >> "$logfile";
 #ip -a >> "logfile";
@@ -43,10 +45,12 @@ do
 	i=$[$i+1];
 done
 
+cat /proc/net/dev >> "$logfile";
+
 #ifconfig $IF >> "$logfile";
 
-if [ $ifexists -eq 1 ]; then
-	ifconfig $IF >> "$logfile";
-else
-	cat /proc/net/dev/ >> "$logfile";
-fi
+#if [ $ifexists -eq 1 ]; then
+#	ifconfig $IF >> "$logfile";
+#else
+#	cat /proc/net/dev >> "$logfile";
+#fi
