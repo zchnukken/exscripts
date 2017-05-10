@@ -1,6 +1,6 @@
 # Collects CPU, network and memory statistics.
 ## Required packages
-* sysstat
+* sysstat  
 $ sudo apt-get install sysstat
 
 ## Get the scripts
