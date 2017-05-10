@@ -2,6 +2,9 @@
 ## Required packages
 * sysstat
 
+## Get the scripts
+$ git clone https://github.com/zchnukken/exscripts.git
+
 ## Get chrome compatible video file
 $ cd ~/Videos  
 $ wget http://media.xiph.org/video/derf/y4m/FourPeople_1280x720_60.y4m
