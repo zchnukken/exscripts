@@ -11,16 +11,16 @@ $ git clone https://github.com/zchnukken/exscripts.git
 $ cd ~/Videos  
 $ wget http://media.xiph.org/video/derf/y4m/FourPeople_1280x720_60.y4m
 
-## Add permissions
-$ chmod u+x mpstat.sh netspeed.sh memstat.sh
+## Close any running chrome instance and run
+$ google-chrome-stable --use-file-for-fake-video-capture="/home/$(id -u -n)/Videos/FourPeople_1280x720_60.y4m" --use-fake-device-for-media-stream
 
 ## Running the scripts
 ## (You only have to run the script once per conference)
+$ chmod u+x mpstat.sh netspeed.sh memstat.sh  
 Make sure you replace \<device name> with an appropiate device i.e eth0  
 $ ./mpstat.sh &! ./netspeed.sh \<device name> &! ./memstat.sh &
 
-## Close any running chrome instance and run
-$ google-chrome-stable --use-file-for-fake-video-capture="/home/$(id -u -n)/Videos/FourPeople_1280x720_60.y4m" --use-fake-device-for-media-stream
+
 
 Open 192.168.1.10/test001 when instructed. (Jitsi specific)  
 When the conference has completed, open a new tab and go to chrome://webrtc-internals.  
